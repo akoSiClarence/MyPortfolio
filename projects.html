@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Clarence's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video autoplay muted loop id="bg-video">
+    <source src="mc.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <header>
+    <h1 class="logo">CLARENCE'S PORTFOLIO</h1>
+    <nav id="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <a href="https://drive.google.com/drive/folders/1ncIs3zq0l5yomtqs87NPCXbSVEgR9Xa_" target="_blank" class="project-card">
+        <img src="Screenshot 2025-11-04 135628.png" alt="Project 1">
+        <h3>A mini project journal</h3>
+        <p>A simple journal maker where you can easily create, delete, and manage your entries.</p>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1bSA4jomxeKWVXKvUYU0a2CyUsI1ANLTI" target="_blank" class="project-card">
+        <img src="Screenshot 2025-11-04 140449.png" alt="Project 2">
+        <h3>A word counter using Java</h3>
+        <p>A simple word counter application built with Java.</p>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/15T3A8aGRe4M8xsZv_-T6XGSozXz1floq" target="_blank" class="project-card">
+        <img src="Screenshot 2025-11-04 141018.png" alt="Project 3">
+        <h3>Pokedex Project</h3>
+        <p>A web-based application that allows users to view, add, delete, and search for Pokémon.</p>
+      </a>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Clarence's Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

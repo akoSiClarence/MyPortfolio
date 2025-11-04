@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarence's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="minecraft-bg">
+
+  <video autoplay muted loop id="bg-video">
+    <source src="mc.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<header>
+  <h1 class="logo">CLARENCE'S PORTFOLIO</h1>
+
+  <nav id="nav-links">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="projects.html">PROJECTS</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>Welcome to My World</h2>
+      <p>Hi, I’m Neil Clarence P. Montana — future full-stack developer and pilot in the making!</p>
+      <a href="projects.html" class="btn">Explore My Crafts</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Clarence's Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>

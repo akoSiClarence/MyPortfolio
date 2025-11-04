@@ -1,0 +1,473 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Font and Background ===== */
+body {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+  background: #000;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 2px solid #00ff66;
+  position: relative;
+  z-index: 100;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  color: #00ff66;
+  font-size: 12px;
+  text-shadow: 0 0 5px #00ff66;
+}
+
+/* ===== NAVIGATION ===== */
+#nav-links {
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+#nav-links a {
+  color: #00ff66;
+  text-decoration: none;
+  background: rgba(0, 255, 100, 0.15);
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+#nav-links a:hover {
+  background: rgba(0, 255, 100, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #00ff66;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px 20px;
+  border: 3px solid #3c8527;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #2cff57;
+}
+
+.hero h2 {
+  font-size: 18px;
+  color: #70ff57;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+.hero p {
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* ===== Button ===== */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3c8527;
+  padding: 10px 20px;
+  border: 2px solid #1a4d1b;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #70c23d;
+  box-shadow: 0 0 10px #57ff6c;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  font-size: 10px;
+  border-top: 3px solid #3c8527;
+  text-shadow: 1px 1px 3px #000;
+  width: 100%;
+  margin-top: auto;
+  flex-shrink: 0;  
+}
+
+
+footer .heart {
+  color: red;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 3px solid #3cff3c;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #3cff3c;
+  padding: 40px 50px;
+  max-width: 1000px;
+  width: 90%;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-container:hover {
+  box-shadow: 0 0 40px #70ff70;
+  transform: scale(1.02);
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #70ff57;
+  box-shadow: 0 0 20px #2cff57;
+}
+
+.about-text {
+  flex: 1;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 9px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.about-text h2 {
+  color: #70ff57;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #57ff6c;
+  font-size: 14px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 140px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container {
+  max-width: 650px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 60px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(112, 255, 87, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.contact-container h2 {
+  color: #9cff57;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+.contact-container p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  margin-top: 25px;
+  line-height: 2;
+  font-size: 0.9rem;
+}
+
+.contact-info strong {
+  color: #aaffaa;
+}
+
+.contact-info a {
+  color: #70ff57;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 3px 6px;
+  border-radius: 6px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.contact-info a:hover {
+  color: #000;
+  background-color: #70ff57;
+  box-shadow: 0 0 10px #70ff57, 0 0 20px #70ff57;
+  text-shadow: 0 0 5px #000;
+}
+
+/* Fix long email text wrapping on contact page */
+.contact-info p,
+.contact-info a {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* ===== PROJECTS PAGE ===== */
+.projects {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  padding: 100px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  flex-grow: 1;
+  padding-bottom: 140px;
+}
+
+.projects h2 {
+  font-size: 1.3rem;
+  color: #70ff57;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px #57ff6c;
+  border-bottom: 2px solid #3cff3c;
+  padding-bottom: 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #3cff3c;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(112, 255, 87, 0.25);
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #70ff57, 0 0 40px #70ff57;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #70ff57;
+  margin-bottom: 15px;
+  box-shadow: 0 0 10px rgba(87, 255, 108, 0.5);
+}
+
+.project-card h3 {
+  color: #9cff57;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.project-card p {
+  color: #ccc;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-text {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide normal nav */
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #00ff66;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  .projects {
+    padding: 80px 15px;
+  }
+
+  .project-card img {
+    height: 150px;
+  }
+
+  .project-card h3 {
+    font-size: 0.8rem;
+  }
+
+  .project-card p {
+    font-size: 0.65rem;
+  }
+
+  .contact-container {
+    width: 90%;
+    padding: 40px 25px;
+  }
+}
+
+/* === Mobile Fixes for Contact & Projects Footer === */
+@media (max-width: 768px) {
+  /* Prevent long email links from overflowing */
+  .contact-info a {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure project content isn't blocked by footer */
+  .projects {
+    min-height: calc(100vh - 160px); /* Leaves space for footer */
+    padding-bottom: 120px;
+  }
+
+  /* Keep footer below everything */
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
